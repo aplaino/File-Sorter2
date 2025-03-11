@@ -21,14 +21,16 @@ This Python script automatically categorizes and moves files into organized fold
 3. **Check Logs**: Review `file_sorter.log` for details on moved files and any encountered errors.
 
 ## Setup & Usage
-1. Install Python (if not already installed).
-2. Copy the script into a `.py` file.
+1. Install Python and Jupyter Notebook (if not already installed).
+2. Open the Jupyter Notebook (`.ipynb` file) in JupyterLab or Jupyter Notebook.
 3. Modify the `path` variable to match your desired directory.
-4. Run the script using:
-   ```sh
-   python file_sorter.py
+4. Run each cell in the notebook sequentially.
+5. After execution, run the following cell to check logs:
+   ```python
+   with open("file_sorter.log", "r") as log_file:
+       print(log_file.read())
    ```
-5. Verify organized files in their respective folders.
+6. Verify organized files in their respective folders.
 
 ## Customization
 - To add support for more file types, update the `file_categories` dictionary with new extensions and folder names.
@@ -41,4 +43,3 @@ This Python script automatically categorizes and moves files into organized fold
 
 ## License
 This script is open-source and free to use. Modify and distribute as needed.
-
